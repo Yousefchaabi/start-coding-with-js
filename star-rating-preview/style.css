@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: fantasy;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #d8d4d4;
+}
+
+.wrapper {
+  position: relative;
+  background-color: #333;
+  width: 600px;
+  border: 1px solid #d8d4d4;
+  border-radius: 10px;
+  padding: 50px 90px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post {
+  display: none;
+}
+
+.text {
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+
+.edit,
+.btn button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #4285f4;
+}
+
+.star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #f1c40f;
+}
+
+input:checked ~ label {
+  color: #f1c40f;
+}
+
+#rate-1:checked ~ form header:before {
+  content: "I hate it";
+}
+
+#rate-2:checked ~ form header:before {
+  content: "I don't like it";
+}
+
+#rate-3:checked ~ form header:before {
+  content: "it's an average";
+}
+
+#rate-4:checked ~ form header:before {
+  content: "I like it";
+}
+
+#rate-5:checked ~ form header:before {
+  content: "I love it";
+}
+
+.wrapper form {
+  display: none;
+}
+
+input:checked ~ form {
+  display: block;
+}
+
+form header {
+  font-size: 25px;
+  width: 100%;
+  color: #f1c40f;
+  font-weight: 500;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+form button {
+  text-transform: uppercase !important;
+  padding: 10px 40px !important;
+  cursor: pointer;
+}
